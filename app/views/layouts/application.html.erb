@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>App278</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+ 
+  <body>
+    <div id="banner">
+      <h1>My Online Store<h1>
+    </div>
+
+  <div id="columns">
+    <div id="side">
+      <ul>
+        <li><a href="http://www./home">Home</li>
+        <li><a href="http://www./home">Questions</li>
+        <li><a href="http://www./home">News</li>
+        <li><a href="http://www./home">Contact</li>
+      </ul>
+    </div>
+    
+    <div id="main">
+        <%= yield %>
+    </div>
+  </div>
+  </body>
+</html>
