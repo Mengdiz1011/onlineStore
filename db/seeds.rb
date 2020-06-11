@@ -14,7 +14,7 @@ contents = [
         "13.98"
     ], [
         "HIPPEAS Organic Chickpea Puffs", 
-        "IThis product is labelled to United States standards and may differ from similar products sold elsewhere in its ingredients, labeling and allergen warnings.", 
+        "This product is labelled to United States standards and may differ from similar products sold elsewhere in its ingredients, labeling and allergen warnings.", 
         "puffs.jpg", 
         "3.26"
     ], [

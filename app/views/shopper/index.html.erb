@@ -1,10 +1,13 @@
 
-<div class="shopper">
+<% if notice %>
+  <p id="notice"><%= notice %></p>
+<% end %>
+<div class="shopper"> 
   <h1>Products Catelog</h1>
 
   <%# customized table %>
-  <table class="shopper">
-    <tbody>
+
+
       <% @products.each do |product| %>
         <div class="entry">
           <%= image_tag product.image %>
@@ -13,9 +16,14 @@
           <div class="price_line">
               <span class="price"><%= product.price %></span>
           </div>
-
+          <div>
+          <%= button_to "Add to Cart", lineitems_path(product_id: product), class: "add_to_cart", remote: true %>
+        </div>
         </div>
       <% end %>
-    </tbody>
-  </table>
+
+  <div><a href="http://www.google.com">Home</div>
+            </div>
+          <%= button_to "Add to Cart", lineitems_path(product_id: 3), class: "add_to_cart", remote: true %>
+        </div>
 </div>

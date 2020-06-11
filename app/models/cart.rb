@@ -1,0 +1,19 @@
+class Cart < ApplicationRecord
+    has_many :lineitems, dependent: :destroy
+    def add_item(product_id)
+        current_item = self.lineitems.find_by(product_id: product_id)
+        
+        # aggregate duplicate product
+        if current_item == nil
+            current_item = self.lineitems.build(product_id: product_id)
+        else
+            current_item.quantity += 1
+        end
+
+        return current_item
+    end
+
+    def total_price
+        lineitems.to_a.sum{|item| item.item_total_price}
+    end
+end
