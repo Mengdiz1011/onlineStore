@@ -5,7 +5,10 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+Lineitem.delete_all
 Product.delete_all
+Cart.delete_all
+
 contents = [
     [
         "Pure Coconut Water", 
